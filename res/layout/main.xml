@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout android:layout_width="fill_parent" 
+              android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android"   
+              android:orientation="vertical">
+
+
+<TableLayout android:layout_width="fill_parent" android:layout_height="fill_parent" 
+                android:stretchColumns="1" android:padding="10dip">
+	 
+	<View android:layout_height="2dip"   android:background="@android:drawable/divider_horizontal_bright" />
+
+	<ViewFlipper android:id="@+id/details" 
+       				 android:layout_width="fill_parent" 
+        			 android:layout_height="wrap_content" > 
+	</ViewFlipper>      
+	<View android:layout_height="2dip" android:background="#FF909090" />
+	<TextView android:id="@+id/sms_text" android:padding="10dip" android:textSize="12sp"/>
+
+
+<TableRow>
+	<Button android:id="@+id/prev_button" android:layout_width="70dip" android:layout_height="50dip"
+       	android:text="@string/prev_button_label" android:textSize="12sp"  />
+       	
+   	<View android:layout_height="fill_parent"   android:layout_width="fill_parent"/>
+
+	<Button android:id="@+id/next_button" android:layout_width="70dip" android:layout_height="50dip"
+       android:text="@string/next_button_label"  android:textSize="12sp"  />
+</TableRow>                
+</TableLayout>
+
+
+
+</LinearLayout>
+

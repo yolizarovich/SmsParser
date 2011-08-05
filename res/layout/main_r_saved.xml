@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    android:background="@drawable/mainbackground"
+    >
+        
+    <ViewFlipper android:id="@+id/details" 
+       			 android:layout_width="fill_parent" 
+        		 android:layout_height="wrap_content"
+        		 android:minHeight="20dip"
+        		 />    
+    
+    <TextView
+        android:id="@+id/sms_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="10dip"
+        android:text="@string/default_message_text"
+        android:layout_below="@id/details"        
+        android:layout_marginTop="50dip"
+        style="@style/SmsFont"   
+        />    
+        	
+	<RadioGroup android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:id="@+id/SmsRadioGroup" 
+		android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal"
+        android:contentDescription="@string/btnheader_label"
+        >	 
+			<RadioButton		
+		        android:id="@+id/sms_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"						
+		        android:text="@string/sms_button_label"
+		        android:checked="true"        
+		        />        
+			<RadioButton		
+		        android:id="@+id/smslist_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"		
+		        android:text="@string/smslist_button_label"        
+		        />    
+    </RadioGroup>
+       
+	<TextView
+        android:id="@+id/btnheader_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"        
+        android:text="@string/btnheader_label"
+        android:layout_above="@id/SmsRadioGroup"
+        android:gravity="center_horizontal"
+        />       
+	<TextView
+        android:id="@+id/statusbar_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"        
+        android:text="..."
+        android:layout_above="@id/btnheader_text"                
+        />        
+ 	<Button		
+        android:id="@+id/systembutton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/statusbar_text"
+        android:text="Delete"
+        style = "@android:style/Widget.Button.Small"
+        />   	        
+
+</RelativeLayout>

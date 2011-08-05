@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Парсер смс</string>
+	<string name="main_title">Парсер СМС</string>   
+	
+	<string name="exit_label">Выйти</string>
+	<string name="prev_button_label">Пред. смс</string>
+	<string name="next_button_label">След. смс</string>	
+	<string name="smslist_button_label">-	Список сообщений</string>
+	<string name="sms_button_label">-	Текущее Сообщение</string>
+	<string name="btnheader_label">Листать:</string>	
+	
+	<string name="conf_del_sms_label">Подтверждение</string>
+	<string name="conf_del_sms_text">Вы действительно хотите удалить данное sms?</string>
+	<string name="conf_del_sms_ok">Да, удалить sms</string>
+	<string name="conf_del_sms_cancel">Нет</string>
+   
+	<string name="about_title">О программе Парсер СМС</string>
+	<string name="about_label">О программе</string>
+               
+	<string name="settings_title">Настройки смс парсера</string>
+	<string name="settings_label">Настройки...</string>	
+	
+	<string name="popup_title">Реагировать на сообщения</string>
+	<string name="popup_summary">Показать всплывающее окно сообщения</string>
+    
+	<string name="default_message_text">Cообщений нет, ваще!</string>      
+   
+	<string name="about_text">\
+Парсер смс  - это  приложение для того чтобы парсить смс-ки.  
+	</string>	
+</resources>

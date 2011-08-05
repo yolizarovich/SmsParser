@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>   
+	<string name="app_name">SmsParser</string>
+	<string name="main_title">Sms Parser</string>
+	
+	<string name="exit_label">Exit</string>
+	<string name="prev_button_label">Prev.</string>
+	<string name="next_button_label">Next</string>
+	<string name="smslist_button_label">-	List of messages</string>
+	<string name="sms_button_label">-	Current message</string>
+	<string name="btnheader_label">	Scroll:</string>
+	
+	<string name="conf_del_sms_label">Confirmation</string>
+	<string name="conf_del_sms_text">Do you really want to delete Sms?</string>
+	<string name="conf_del_sms_ok">Yes, delete sms</string>
+	<string name="conf_del_sms_cancel">No</string>	
+	
+   
+	<string name="about_title">About Sms Parser</string>
+	<string name="about_label">About</string>
+   
+	<string name="settings_label">Settings...</string>        
+	<string name="settings_title">Sms Parser settings</string>	
+	
+	<string name="delete_sms_label">Delete current sms</string>
+	
+	<string name="popup_title">Popups</string>
+	<string name="popup_summary">Show popup sms</string>   		
+
+<string name="pref_popup_key">popup</string>
+    
+	<string name="default_message_text">No messages found!</string>      
+   
+	<string name="about_text">\
+Sms Parser Is application for  ...
+	</string>
+</resources>
