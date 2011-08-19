@@ -8,7 +8,7 @@
 	<string name="next_button_label">След. смс</string>	
 	<string name="smslist_button_label">-	Список сообщений</string>
 	<string name="sms_button_label">-	Текущее Сообщение</string>
-	<string name="btnheader_label">Листать:</string>	
+	<string name="btnheader_label">Сообщение:</string>	
 	
 	<string name="conf_del_sms_label">Подтверждение</string>
 	<string name="conf_del_sms_text">Вы действительно хотите удалить данное sms?</string>

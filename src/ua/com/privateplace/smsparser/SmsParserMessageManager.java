@@ -11,8 +11,10 @@ import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.net.Uri;
 import android.text.Spannable;
+import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
  
 public class SmsParserMessageManager {
@@ -171,15 +173,6 @@ public class SmsParserMessageManager {
 		return smsMessages.get(lasstRequestedMessage);			
 	}	
 	
-	public void parseRequestedMessage(){		
-		SmsParserMessage  message;
-		if (smsCount > 0 && lasstRequestedMessage >= 0 && lasstRequestedMessage < smsCount){
-			message =  smsMessages.get(lasstRequestedMessage);
-			if (message.parsedMessageBody == null) 
-				message.parsedMessageBody = parse(message.messageBody);
-		}
-	}	
-	
 	private void deleteRequestedMessage(){
 		SmsParserMessage  message;	
 		AppEx.v("---- lasstRequestedMessage------" + lasstRequestedMessage);
@@ -193,39 +186,25 @@ public class SmsParserMessageManager {
 			AppEx.v("---- lasstRequestedMessage2------" + lasstRequestedMessage);
 			AppEx.v("---- smsCount2------" + smsCount);
 		}
-	}	
-	
-	public ArrayList<String> parse(String  str){
-		AppEx.v("===s===PARSING===");
-		ArrayList<String> arr = new ArrayList<String>(1);			
-			
-		Matcher mt = pPass.matcher(str);	
-		while (mt.find()) {			
-			arr.add(str.subSequence(mt.start(1), mt.end(1)).toString());
-		}					
-		
-		mt = pBank.matcher(str);	
-		while (mt.find()) {
-			for (int i = 1;i<4;i++){	
-				if (mt.group(i) != null){				
-					arr.add(str.subSequence(mt.start(i), mt.end(i)).toString());
-				}
-			}
-		}		
-		return arr;
 	}
+	
 	
 	public void parse(Spannable str){
 		AppEx.v("===sp===PARSING===");		
 			
 		Matcher mt = pPass.matcher(str);	
-		while (mt.find()) str.setSpan(new StyleSpan(android.graphics.Typeface.BOLD ), mt.start(1), mt.end(1), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+		while (mt.find()) {
+			str.setSpan(new StyleSpan(android.graphics.Typeface.BOLD ), mt.start(1), mt.end(1), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+			str.setSpan(new ForegroundColorSpan(Color.GREEN), mt.start(1), mt.end(1), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+		}
 		
 		mt = pBank.matcher(str);	
 		while (mt.find()) {
 		for (int i = 1;i<4;i++){	
 			if (mt.group(i) != null){
 			 str.setSpan(new StyleSpan(android.graphics.Typeface.BOLD), mt.start(i), mt.end(i), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+			 str.setSpan(new ForegroundColorSpan(Color.GREEN), mt.start(i), mt.end(i), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+			 			 
 			}
 		}}
 	}
@@ -237,3 +216,4 @@ public class SmsParserMessageManager {
 	
 	
 }
+

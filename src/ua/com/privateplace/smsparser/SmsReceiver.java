@@ -8,7 +8,7 @@ public class SmsReceiver extends BroadcastReceiver {
 
   @Override
   public void onReceive(Context context, Intent intent) {
-	  AppEx.v("SMSReceiver: onReceive(AHTUNG)");
+	AppEx.v("SMSReceiver: onReceive(AHTUNG)");
     
     intent.setClass(context, SmsReceiverService.class);
     intent.putExtra("result", getResultCode());
